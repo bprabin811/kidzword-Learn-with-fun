@@ -1,5 +1,15 @@
 # kidzworld
 
+![SAMPLE!](one.jpg)
+![SAMPLE!](two.jpg)
+
+![SAMPLE!](three.jpg)
+![SAMPLE!](four.jpg)
+
+![SAMPLE!](five.jpg)
+![SAMPLE!](six.jpg)
+
+![SAMPLE!](seven.jpg)
 A new Flutter project.
 
 ## Getting Started

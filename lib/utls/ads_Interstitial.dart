@@ -11,8 +11,8 @@ class MyInterstitialAd extends StatefulWidget {
 class _MyInterstitialAdState extends State<MyInterstitialAd> {
   late InterstitialAd _interstitialAd;
   bool _isInterstitialAdReady = false;
-  final String _adUnitId ='ca-app-pub-3940256099942544/1033173712'; // replace with your own ad unit ID
-  // final String _adUnitId ='ca-app-pub-4520713668416571/6083161574'; 
+  // final String _adUnitId ='ca-app-pub-3940256099942544/1033173712'; // replace with your own ad unit ID
+  final String _adUnitId ='ca-app-pub-4520713668416571/6083161574'; 
   @override
   void initState() {
     super.initState();

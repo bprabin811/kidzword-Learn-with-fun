@@ -14,6 +14,7 @@ import 'package:kidzworld/pages/homepage.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
+  
   WidgetsFlutterBinding.ensureInitialized();
   MobileAds.instance.initialize();
   runApp(const MyApp());

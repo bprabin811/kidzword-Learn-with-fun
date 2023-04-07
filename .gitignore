@@ -43,4 +43,9 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
-/lib/
+
+/lib/database
+/lib/utls
+/lib/games
+/lib/learn
+/lib/pages

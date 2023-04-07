@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:kidzworld/utls/ads_Interstitial.dart';
+import 'package:kidzworld/utls/ads_banner.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
@@ -13,30 +15,19 @@ class MyHomePage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
+            SizedBox(
                 height: 250,
                 width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(
-                  color: Colors.pink.shade100,
-                  borderRadius:
-                      const BorderRadius.only(bottomRight: Radius.circular(50)),
-                ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Column(
                       children: [
-                        Text('KidzWorld',
-                            style: TextStyle(
-                                shadows: const <Shadow>[
-                                  BoxShadow(
-                                      color: Colors.yellow,
-                                      blurRadius: 5,
-                                      offset: Offset(5, 5))
-                                ],
-                                fontSize: 40,
-                                color: Colors.amber.shade800,
-                                fontWeight: FontWeight.bold)),
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(50),
+                          child: const Image(
+                            image: AssetImage('assets/images/playstore.png'),width: 100,)),
+                          const Gap(20),
                         Text(
                           'Learn with Fun',
                           style: TextStyle(
@@ -150,7 +141,6 @@ class MyHomePage extends StatelessWidget {
                         Colors.teal.shade400),
                     buildOptionContainer(context, 'GK', '/mcq-game',
                         FontAwesomeIcons.question, Colors.green.shade400),
-                    // buildOptionContainer(context, 'Guess the Object', '/guess-object-game-page',Icons.question_mark),
                   ],
                 ),
               ),
@@ -183,16 +173,21 @@ class MyHomePage extends StatelessWidget {
                   crossAxisCount: 3,
                   physics: const NeverScrollableScrollPhysics(),
                   children: [
-                    // buildOptionContainer(context, 'Settings', '/settings-page', Icons.settings,Colors.pink.shade400),
-                    buildOptionContainer(context, 'About', '/about-page',
-                        Icons.info, Colors.teal.shade400),
-                    // buildOptionContainer(context, 'Send FeedBack',
-                    //     '/feedback-page', Icons.feedback, Colors.grey.shade600),
+                    // buildOptionContainer(context, 'About', '/about-page',
+                        // Icons.info, Colors.teal.shade400),
+
+                    MyInterstitialAd(),
+                    
                   ],
                 ),
               ),
             ),
             const Gap(20),
+            SizedBox(
+              width: MediaQuery.of(context).size.width,
+              child: const Center(child: MyAds()),
+            ),
+            const Gap(20)
           ],
         ),
       ),

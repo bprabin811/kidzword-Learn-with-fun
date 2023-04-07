@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:kidzworld/utls/ads_banner.dart';
 import 'dart:math';
 import 'package:kidzworld/utls/custom_appbar.dart';
 import 'package:kidzworld/database/gk_questions.dart';
@@ -142,6 +143,7 @@ class _McqGameScreenState extends State<McqGameScreen> {
           ],
         ),
       ),
+      bottomNavigationBar: const MyAds(),
     );
   }
 
@@ -152,6 +154,7 @@ class _McqGameScreenState extends State<McqGameScreen> {
         return AlertDialog(
           title: Column(
             children: [
+              const MyAds(),
               Text('Result:${score / 10 * 100}%'),
               Text("Right Answers: $score"),
               const Text("Total Questions: 10"),

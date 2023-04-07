@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:kidzworld/utls/ads_banner.dart';
 import 'package:kidzworld/utls/custom_appbar.dart';
 import 'package:kidzworld/utls/custom_choice.dart';
 import 'package:kidzworld/utls/custum_grid.dart';
@@ -86,9 +87,10 @@ class _PuzzalGameState extends State<PuzzalGame> {
   showDialog(
     context: context,
     builder: (context) => SimpleDialog(
-      title: Text('Instructions'),
-      contentPadding: EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+      title: const Center(child: Text('Instructions')),
+      contentPadding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
       children: <Widget>[
+        const MyAds(),
         Instructions(
           bullet: '1',
           text: 'The objective of the game is to rearrange the puzzle pieces in the correct order.',
@@ -174,6 +176,7 @@ class _PuzzalGameState extends State<PuzzalGame> {
           ],
         ),
       ),
+       bottomNavigationBar: const MyAds(),
     );
   }
 }

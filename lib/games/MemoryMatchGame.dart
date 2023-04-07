@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:kidzworld/utls/ads_banner.dart';
 import 'package:kidzworld/utls/custom_appbar.dart';
 import 'package:kidzworld/utls/custom_choice.dart';
 import 'package:kidzworld/utls/custum_grid.dart';
@@ -225,6 +226,7 @@ class _MemoryMatchGameState extends State<MemoryMatchGame> {
           ],
         ),
       ),
+      bottomNavigationBar: const MyAds(),
     );
   }
 }

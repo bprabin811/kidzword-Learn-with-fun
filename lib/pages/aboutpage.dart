@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:kidzworld/utls/ads_Interstitial.dart';
+import 'package:kidzworld/utls/ads_banner.dart';
 
 class AboutPage extends StatelessWidget {
   static const routeName = '/about-page';
@@ -20,21 +22,16 @@ class AboutPage extends StatelessWidget {
           children: [
             const Gap(25),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: Text('KidzWorld',
-                  style: TextStyle(
-                      shadows: const <Shadow>[
-                        BoxShadow(
-                            color: Colors.yellow,
-                            blurRadius: 5,
-                            offset: Offset(5, 5))
-                      ],
-                      fontSize: 40,
-                      color: Colors.amber.shade800,
-                      fontWeight: FontWeight.bold)),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+              child: ClipRRect(
+                  borderRadius: BorderRadius.circular(50),
+                  child: const Image(
+                    image: AssetImage('assets/images/playstore.png'),
+                    width: 100,
+                  )),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
               child: Text(
                 'Learn with Fun',
                 style: TextStyle(
@@ -74,13 +71,6 @@ class AboutPage extends StatelessWidget {
                 ),
               ),
             ),
-            // const Padding(
-            //   padding: EdgeInsets.symmetric(horizontal: 16),
-            //   child: Text(
-            //     'Email us at kidzworld095@gmail.com for support or feedback.',
-            //     style: TextStyle(fontSize: 18),
-            //   ),
-            // ),
             const Gap(30),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -92,6 +82,7 @@ class AboutPage extends StatelessWidget {
           ],
         ),
       ),
+      bottomNavigationBar: const MyAds(),
     );
   }
 }

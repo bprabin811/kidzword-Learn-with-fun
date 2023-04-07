@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:kidzworld/utls/ads_banner.dart';
 import 'dart:math';
 
 import 'package:kidzworld/utls/custom_appbar.dart';
@@ -171,6 +172,7 @@ class _MathGameState extends State<MathGame> {
           ],
         ),
       ),
+      bottomNavigationBar: const MyAds(),
     );
   }
 }

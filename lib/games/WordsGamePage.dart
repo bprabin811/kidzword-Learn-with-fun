@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:kidzworld/utls/ads_banner.dart';
 import 'package:kidzworld/utls/custom_appbar.dart';
 import 'package:kidzworld/utls/custom_choice.dart';
 
@@ -201,6 +202,7 @@ class _WordsGamePageState extends State<WordsGamePage> {
           ],
         ),
       ),
+       bottomNavigationBar: const MyAds(),
     );
   }
 }
